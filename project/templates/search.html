@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <h1>검색 결과</h1>
+            <div id="board">
+                {{add_info|safe}}
+            </div>
+            <a href="#" onClick="history.back()">이전페이지로</a>
+        </div>
+    </body>
+</html>

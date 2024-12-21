@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <form action="/user_search/" method="POST">
+                <input type="search" name="user_id" placeholder="유저 아이디 입력.">
+                <input type="submit" value="검색">
+            </form>
+            <p>{{error}}</p>
+            <img src="{{ url_for('static', filename=profile) }}">
+            <h1>{{name}}</h1>
+            <div id="board">
+                <p>전화번호 : {{number}}</p>
+                <hr width="40%">
+                <p>학교 : {{school}}</p>
+                <hr width="40%">
+            </div>
+            <a href="/edit/">정보 수정</a>
+        </div>
+        <a href="/">게시판으로</a>
+        <a href="/login/">로그인</a>
+        <a href="/join/">회원가입</a>
+        <a href="/logout/">로그아웃</a>
+    </body>
+</html>

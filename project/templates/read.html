@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <h2>{{title}}</h2>
+            {{description}}
+            {{empty}}
+            </div>
+            <a href="#" onClick="history.back()">이전페이지로</a>
+            <a href="/" onClick="history.back()">처음 페이지로</a>
+            <a href="/delete/{{id}}/" id="delete">글 삭제하기</a>
+            <a href="/update/{{id}}" id="update">글 수정하기</a>
+            <a href="/download/{{id}}/" id="download">파일 다운로드</a>
+        </div>
+    </body>
+</html>

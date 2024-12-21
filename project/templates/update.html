@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <form action="/update/{{id}}" method = "POST">
+                <p>제목 : <input type="text" name="title" value="{{title}}"></p>
+                <p>내용 : <textarea name="description">{{description}}</textarea></p>
+                <p><input type="submit" value="수정"></p>
+            </form>
+            </div>
+            <a href="#" onClick="history.back()">이전페이지로</a>
+        </div>
+    </body>
+</html>

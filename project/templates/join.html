@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <h1>회원가입</h1>
+            <form id="login_info" action="/join/" method="POST">
+               <p>id : <input type="text" name="add_id" placeholder="아이디를 입력해주세요."></p>
+               <p>pw : <input type="text" name="add_pw" placeholder="비밀번호를 입력해주세요."></p>
+               <p>전화번호 : <input type="text" name="number" placeholder="전화번호를 입력해주세요."></p>
+               <p>재학 중인 학교 : <input type="text" name="school" placeholder="학교를 입력해주세요."></p>
+               <p>생년 월일 : <input type="text" name="birthday" placeholder="생년 월일을 입력해주세요."></p>
+               <input type="submit" value="계정 생성">
+               <p>{{error}}</p>
+            </form>
+        </div>
+        <a href="/login/">로그인 하러 가기</a>
+        <a href="/" onClick="history.back()">처음 페이지로</a>
+    </body>
+</html>

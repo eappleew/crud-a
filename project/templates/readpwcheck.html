@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <h2>비밀글 비밀번호 확인</h2>
+            <form action="/read/{{id}}" method="POST" >
+                <input type="text" name="readpwcheck" placeholder="비밀번호를 입력해주세요">
+            </form>
+            <h3>{{error}}</h3>
+        </div>
+        <a href="/" onClick="history.back()">처음 페이지로</a>
+    </body>
+    <script>
+    </script>
+</html>

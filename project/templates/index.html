@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <h1>게시판</h1><a href="/profile/" id="profile">프로필</a></p>
+            <form id="searchform" action="/search/" method="POST">
+                <select id="searchtype" name="searchType" onchange="searchchange()">
+                    <option value="all">전체</option>
+                    <option value="title">제목</option>
+                    <option value="description">내용</option>
+                </select>
+                <input type="search" name="object" placeholder="검색어를 입려해주세오.">
+                <input type="submit" value="검색">
+            </form>
+            <div id="board">
+                {{add_info|safe}}
+            </div>
+            <a href="/create/">새로운 글 작성</a>
+        </div>
+    </body>
+</html>

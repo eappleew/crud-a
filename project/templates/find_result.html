@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <h2>찾은 아이디와 비번</h2>
+            <h3>id = {{user_id}}</h3>
+            <h3>pw = {{user_pw}}</h3>
+            </div>
+            <a href="#" onClick="history.back()">이전페이지로</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="{{ url_for('static', filename='board.css') }}"/>
+    </head>
+    <body>
+        <div>
+            <h1>로그인</h1>
+            <form id="login_info" action="/login/" method="POST">
+               <p>id : <input type="text" name="user_id" placeholder="아이디를 입력해주세요."></p>
+               <p>pw : <input type="text" name="user_pw" placeholder="비밀번호를 입력해주세요."></p>
+               <input type="submit" value="로그인">
+               <p>{{error}}</p>
+            </form>
+        </div>
+        <a href="/find/">아이디 & 비밀번호 찾기</a>
+        <a href="#" onClick="history.back()">이전페이지로</a>
+        <a href="/" onClick="history.back()">처음 페이지로</a>
+    </body>
+</html>
